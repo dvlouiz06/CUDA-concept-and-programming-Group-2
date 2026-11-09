@@ -162,6 +162,16 @@ Guide Question (b): Prefetching (cudaMemPrefetchAsync) is recommended for dense,
 ## Variant 3
 Variant 3 incorporates cudaMemPrefetchAsync to migrate data from host memory to the GPU device before kernel execution, which yields an average execution time of 6.049 ms (15.26x speedup over the 92.328 ms C baseline) when utilizing a block size of 256. Profiler results show that prefetching successfully eliminates on-demand page faults by bulk-transferring memory in chunks capped at 2.097 MB across 132 host-to-device operations, resulting in a total transferred size of 268.5 MB. Scaling the block size to 512 degrades performance to an average of 7.650 ms (12.07x speedup with 16 blocks), while a block size of 1024 further increases average execution time to 12.046 ms (7.66x speedup with 8 blocks), because launching fewer oversized blocks underutilizes available streaming multiprocessors.
 
+## Variant 4
+Variant 4 uses CUDA Unified Memory with prefetching and page creation. For the given matrix, the average execution times for block sizes 256, 512, and 1024 were 7.414 ms, 6.872 ms, and 12.056 ms, respectively. Compared to the baseline C program (92.328 ms), these resulted in speedups of 12.45x, 13.43x, and 7.66x.
+
+Block size 512 performed slightly better than 256, while block size 1024 resulted in a much longer execution time. This suggests that a larger block size does not necessarily improve performance. The results also show that prefetching helped reduce execution time compared to using Unified Memory without prefetching, since the data was already transferred to the GPU before the kernel ran.
+
+## Variant 5
+Variant 5 builds on the previous variant by using mem advise. Specifically, cudaMemAdviseSetPreferredLocation and cudaMemAdviseSetReadMostly are applied to both the matrix and input vector. The program then uses prefetching to transfer the matrix and input vector to the GPU before kernel execution. 
+
+For the given matrix, the average execution times for block sizes 256, 512, and 1024 were 5.166 ms, 6.697 ms, and 11.730 ms, respectively. These resulted in speedups of 17.87x, 13.79x, and 7.87x compared to the baseline C program (92.328 ms). Block size 256 achieved the lowest execution time, while block size 1024 had the longest. This shows that smaller block sizes performed better for this workload. The use of memory advice also helps CUDA manage the matrix and input vector based on their expected access patterns.
+
 ---
 
 ## v.) Problems Encountered, Solutions Made, Unique Methodology, & AHA Moments
