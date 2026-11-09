@@ -165,6 +165,10 @@ Guide Question (b): Prefetching (cudaMemPrefetchAsync) is recommended for dense,
 
 ## v.) Problems Encountered, Solutions Made, Unique Methodology, & AHA Moments
 - Initial output differed from the C/SIMD baseline due to different initialization of the array. Our solution was to standardized the random seed initialization across all files and verified the correctness using max absolute error and relative error.
+- At first, our CUDA output did not match the C/SIMD baseline because the arrays used different random values in each file. We fixed it by using the same random seed everywhere and checking the max absolute and relative error. Our program only printed the average time, so we used nsys to get the min and max. We also tried ncu, but it made the program look slower, so we used it only to understand the results, not for timing.
+- Unlike the steady C baseline, the CUDA variants showed a massive first-loop spike. This made us realize the initial delay is caused by Unified Memory page faults during Host-to-Device migration, rather than the computation itself.
 ---
 
 ## vi.) Differences Between SIMD and SIMT in Handling Parallelism (PROS and CONS)
+
+
