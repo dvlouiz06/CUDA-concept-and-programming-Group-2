@@ -82,7 +82,7 @@
 
 ### Analysis of Kernel Execution Time
 
-###Variant 2: 
+## Variant 2: 
 Because Variant 2 uses cudaMallocManaged without prefetching or cudaMemAdvise, the first loop stalls on 3550 to 3988 Host to Device page faults to migrate 67.174MB of data, resulting in a high maximum execution time (24.86ms at block size 256). Once cached in the VRAM, runs 2 through 30 execute in 1.68ms (min), a 14.8x speedup.
 
 Guide Question (a) - For N = 4096 rows, block size of 256, 512, and 1024 produce 16, 8, and 4 blocks respectively. Because the T4 has 40SMs and each block executes on a single SM, larger block size leave up to 90% of the GPU idle. Block size 256 is recommended as its maximizes active SMs and delivers the fastest average kernel time.
