@@ -171,5 +171,13 @@ Variant 3 incorporates cudaMemPrefetchAsync to migrate data from host memory to 
 ---
 
 ## vi.) Differences Between SIMD and SIMT in Handling Parallelism (PROS and CONS)
+SIMD (used by our XMM and YMM kernels) has one CPU thread run a single instruction on 4 or 8 floats at once. SIMT (CUDA) has thousands of threads run the same instruction together, grouped into warps of 32. With SIMD we wrote the vector instructions ourselves, while with SIMT we wrote the code for one thread and the hardware handles the grouping.
+
+<img width="626" height="232" alt="image" src="https://github.com/user-attachments/assets/f743046a-3d34-4524-be42-a4df502f2a3d" />
+
+In our results, SIMT was faster on the large 8192 x 8192 matrix (CUDA best about 17.9x over its C baseline vs YMM about 3.08x over its own). SIMD is better for small or latency-sensitive work, and SIMT is better for large data-parallel work.
+
+
+
 
 
