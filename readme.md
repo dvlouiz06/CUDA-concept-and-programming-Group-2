@@ -19,7 +19,7 @@ Google Colab Link: https://colab.research.google.com/drive/1fliNFHhCTEUT30Bzmiq0
 * **Hardware Environment (GPU):** NVIDIA Tesla T4 (Google Colab, Compute Capability 7.5, 40 SMs)
 
 ### AI Usage Declaration
-
+AI was used to help with GitHub formatting, understanding nsys formatting syntax, ncu formatting syntax, and additional information provided by the nsys results that may help understand unfamiliar parameters. AI was also used for debugging unexpected codes and mistyped variable names. Primary C/CUDA logic, kernel implementation, and analysis were conducted by the team.
 
 ---
 
