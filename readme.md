@@ -5,7 +5,7 @@
 ### Group Members
 * **Louiz Alfredo Dela Cruz** — Variant 2
 * **[Teammate Name 2]** — Variant 1
-* **[Teammate Name 3]** — Variant 3
+* **Jonathan R. Bueno** — Variant 3
 * **[Teammate Name 4]** — Variant 4
 
 ### Project Specifications
