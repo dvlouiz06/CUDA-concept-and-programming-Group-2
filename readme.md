@@ -143,7 +143,14 @@ Google Colab Link: https://colab.research.google.com/drive/1fliNFHhCTEUT30Bzmiq0
 
 ## iii.) Comparative Table of Execution Time ($2^{26}$ Elements)
 
+## CUDA Block = 256
+<img width="598" height="637" alt="image" src="https://github.com/user-attachments/assets/9670b7e7-b25f-4cbe-825f-da777af7809f" />
 
+## CUDA Block = 512
+<img width="595" height="600" alt="image" src="https://github.com/user-attachments/assets/74d76024-506f-43dd-acd0-aa4afa222587" />
+
+## CUDA Block = 1024
+<img width="598" height="605" alt="image" src="https://github.com/user-attachments/assets/21ce8885-3ad6-4a34-8855-4d444625dcf7" />
 
 ## iv.) Analysis of Results
 
