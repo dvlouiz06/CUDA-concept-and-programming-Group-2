@@ -3,8 +3,8 @@
 ## 0.) Group Members, Project Specifications, & AI Usage Declaration
 
 ### Group Members
-* **Louiz Alfredo Dela Cruz** — Variant 2
-* **[Teammate Name 2]** — Variant 1
+* **Louiz Alfredo DV. Dela Cruz** — Variant 2
+* **Adonis Mikel B. Solomon** — Variant 1
 * **Jonathan R. Bueno** — Variant 3
 * **Kaleela Ysabel B. De Gracia** — Variant 4 & 5
 
@@ -29,15 +29,15 @@
 
 
 ### Variant 2: CUDA Unified (No Prefetch, No `mem_advise`)
-* **Case 1: Block Size = 256**[cite: 25, 28]
+* **Case 1: Block Size = 256**
 
 *Insert screenshot
 
-* **Case 2: Block Size = 512**[cite: 25, 28]
+* **Case 2: Block Size = 512**
 
 *Insert screenshot
 
-* **Case 3: Block Size = 1024**[cite: 25, 28]
+* **Case 3: Block Size = 1024**
 
 *Insert screenshot
 ### Variant 3: CUDA Prefetch & CUDA Prefetch + Page Creation
