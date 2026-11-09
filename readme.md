@@ -1,4 +1,4 @@
-# Deep Dive: CUDA Programming Project — Matrix-Vector Multiplication
+# Deep Dive: CUDA Programming Project - Matrix-Vector Multiplication
 
 ## 0.) Group Members, Project Specifications, & AI Usage Declaration
 
@@ -139,7 +139,7 @@
 
 ---
 
-## iii.) Comparative Table of Execution Time ($2^{24}$ Elements)
+## iii.) Comparative Table of Execution Time ($2^{26}$ Elements)
 
 
 
