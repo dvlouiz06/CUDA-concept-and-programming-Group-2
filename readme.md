@@ -42,6 +42,14 @@
 
 ### Variant 3: CUDA Prefetch & CUDA Prefetch + Page Creation
 *Insert screenshots
+* **Case 1: Block Size = 256**
+<img width="995" height="192" alt="image" src="https://github.com/user-attachments/assets/4260cc33-4475-4aff-a5d7-16733e7203b1" />
+
+* **Case 2: Block Size = 512**
+<img width="1010" height="190" alt="image" src="https://github.com/user-attachments/assets/858ee80c-be88-4ae8-9228-9a3bcc71a93f" />
+
+* **Case 3: Block Size = 1024**
+
 
 ### Variant 4: CUDA Prefetch + Page Creation + `mem_advise`
 *Insert screenshots
