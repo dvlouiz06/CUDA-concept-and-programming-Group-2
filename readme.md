@@ -147,6 +147,13 @@
 
 ### Analysis of Kernel Execution Time
 
+## Variant 2
+Because Variant 2 uses cudaMallocManaged without prefetching or cudaMemAdvise, the first iteration stalls on 3,550 to 3,988 Host to Device page faults to migrate 67.174 MB of data, resulting in a high maximum execution time. Once cached in GPU VRAM, runs 2 through 30 execute in 1.68 ms (Min), a 14.8x speedup over the first run.
+
+Guide Queation (a)- Block sizes of 256, 512, and 1024 launch 16, 8, and 4 blocks respectively. Because the Tesla T4 has 40 SMs and each block executes on a single SM, larger block sizes leave up to 90% of the GPU idle and drop memory throughput from 37.37% to 8.39%. Block size 256 is recommended as it maximizes active SMs and delivers the fastest average kernel time.
+
+Guide Question (b): Prefetching (cudaMemPrefetchAsync) is recommended for dense, deterministic workloads like Matrix Vector multiplication where all elements are read, as bulk DMA transfers eliminate first run page fault stalls. Letting CUDA manage memory on-demand (Variant 2) is better for sparse, data dependent access patterns where only a subset of memory is touched, or across long iterative loops where the initial migration cost is amortized over many kernel launches.
+
 
 
 ### Analysis of Speed Performance Across All Platforms
