@@ -59,13 +59,13 @@
 
 ### Variant 5: CUDA Program using a Grid-Stride Loop with Prefetch, Page Creation, and Memory Advise
 * **Block Size = 256:**
-<img width="837" height="155" alt="image" src="https://github.com/user-attachments/assets/4c1995b1-1cc9-4a2e-8c15-d6cb7365c4cf" />
+<img width="888" height="141" alt="image" src="https://github.com/user-attachments/assets/fb843559-5b77-4840-911d-7a82a4dbeaeb" />
 
 * **Block Size = 512:**
-<img width="840" height="155" alt="image" src="https://github.com/user-attachments/assets/ccf96e55-c769-4fd0-aa58-f3da3f7c7c2c" />
+<img width="987" height="155" alt="image" src="https://github.com/user-attachments/assets/c5abb74f-25fd-4c98-ae68-88ee645ac9ae" />
 
 * **Block Size = 1024:**
-<img width="831" height="157" alt="image" src="https://github.com/user-attachments/assets/9f0d3db2-47ac-4f1e-9db7-1fed34c9f5cc" />
+<img width="980" height="157" alt="image" src="https://github.com/user-attachments/assets/1c2772b2-1f70-4bd3-9812-85bc9488c809" />
 
 
 ## ii.) Screenshots of `nsys` (and `ncu`) for All CUDA Variants
@@ -123,19 +123,19 @@
 
 ### Variant 5: CUDA Program using a Grid-Stride Loop with Prefetch, Page Creation, and Memory Advise
 * **Block Size = 256:**
-<img width="1451" height="157" alt="image" src="https://github.com/user-attachments/assets/21735ac8-c370-4e2c-9b5c-7aafa7b029ca" />
-<img width="1181" height="270" alt="image" src="https://github.com/user-attachments/assets/0c504bc7-9d16-468f-9bb1-a03a93ca7837" />
-<img width="977" height="132" alt="image" src="https://github.com/user-attachments/assets/5c096dfd-1459-42cc-a5c6-65286f49b2aa" />
+<img width="1458" height="148" alt="image" src="https://github.com/user-attachments/assets/6d501967-561c-4612-8c82-1236ee401357" />
+<img width="1167" height="276" alt="image" src="https://github.com/user-attachments/assets/27da1906-f45b-41e4-83ee-f9496a93c5f1" />
+<img width="988" height="142" alt="image" src="https://github.com/user-attachments/assets/790fd31e-697b-4ee6-b530-cafbb7bd4313" />
 
 * **Block Size = 512:**
-<img width="1453" height="157" alt="image" src="https://github.com/user-attachments/assets/8bc6fc5d-8b66-4867-87f5-7c104d8f9993" />
-<img width="1158" height="270" alt="image" src="https://github.com/user-attachments/assets/859fdc6f-b909-4c84-892f-840698345b4c" />
-<img width="956" height="133" alt="image" src="https://github.com/user-attachments/assets/2d14a86c-e712-4583-8f87-c8ad04f2fc12" />
+<img width="1473" height="152" alt="image" src="https://github.com/user-attachments/assets/e3723002-8952-4bcc-9929-928893b2e3a0" />
+<img width="1181" height="280" alt="image" src="https://github.com/user-attachments/assets/614935c8-cc99-4f1c-9fee-46b355e27e13" />
+<img width="962" height="128" alt="image" src="https://github.com/user-attachments/assets/60169124-86dc-4f57-aada-93f19ec3e8ff" />
 
 * **Block Size = 1024:**
-<img width="1485" height="148" alt="image" src="https://github.com/user-attachments/assets/3ddb67b7-f3e1-4f3c-8856-de4cb6d48dee" />
-<img width="1166" height="260" alt="image" src="https://github.com/user-attachments/assets/a4db64ed-6ffe-4f56-9d6b-6fe1131cdd74" />
-<img width="957" height="135" alt="image" src="https://github.com/user-attachments/assets/50d2b9ce-81ff-4aa8-b31a-06740d4fb971" />
+<img width="1470" height="161" alt="image" src="https://github.com/user-attachments/assets/39c74084-d597-40d1-b673-38be43b27f13" />
+<img width="1177" height="275" alt="image" src="https://github.com/user-attachments/assets/facdb8c3-3b56-4887-a166-5a40d5fb3b10" />
+<img width="968" height="130" alt="image" src="https://github.com/user-attachments/assets/a91442c2-ff7c-4eb3-bd78-1072a83ab561" />
 
 ---
 
