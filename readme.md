@@ -147,8 +147,6 @@ Google Colab Link: https://colab.research.google.com/drive/1fliNFHhCTEUT30Bzmiq0
 
 ## iv.) Analysis of Results
 
-### Analysis of Kernel Execution Time
-
 ## Variant 1
 Variant 1 is the plain C program that runs only on the CPU. Since the data is already in host memory, there is no Host-to-Device migration and no first-loop stall like we saw in Variant 2. For the 8192 x 8192 matrix (2^26 elements), the average time over 30 loops was 92.328 ms, with a minimum of 87.180 ms and a maximum of 101.561 ms. The max is only about 1.16x the min, so the timing was very consistent. This average is what we used as the baseline for every speedup in our comparative table.
 
@@ -161,9 +159,6 @@ Guide Queation (a)- Block sizes of 256, 512, and 1024 launch 16, 8, and 4 blocks
 
 Guide Question (b): Prefetching (cudaMemPrefetchAsync) is recommended for dense, deterministic workloads like Matrix Vector multiplication where all elements are read, as bulk DMA transfers eliminate first run page fault stalls. Letting CUDA manage memory on-demand (Variant 2) is better for sparse, data dependent access patterns where only a subset of memory is touched, or across long iterative loops where the initial migration cost is amortized over many kernel launches.
 
-
-
-### Analysis of Speed Performance Across All Platforms
 
 
 ---
