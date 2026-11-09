@@ -6,7 +6,7 @@
 * **Louiz Alfredo Dela Cruz** — Variant 2
 * **[Teammate Name 2]** — Variant 1
 * **Jonathan R. Bueno** — Variant 3
-* **[Teammate Name 4]** — Variant 4
+* **Kaleela Ysabel B. De Gracia** — Variant 4 & 5
 
 ### Project Specifications
 * **Assigned Kernel Problem:** Matrix-Vector Product ($Y_i = \sum_{j=0}^{n-1} A_{ij} \cdot x_j$)
