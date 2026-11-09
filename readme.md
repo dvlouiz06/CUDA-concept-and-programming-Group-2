@@ -149,6 +149,11 @@ Google Colab Link: https://colab.research.google.com/drive/1fliNFHhCTEUT30Bzmiq0
 
 ### Analysis of Kernel Execution Time
 
+## Variant 1
+Variant 1 is the plain C program that runs only on the CPU. Since the data is already in host memory, there is no Host-to-Device migration and no first-loop stall like we saw in Variant 2. For the 8192 x 8192 matrix (2^26 elements), the average time over 30 loops was 92.328 ms, with a minimum of 87.180 ms and a maximum of 101.561 ms. The max is only about 1.16x the min, so the timing was very consistent. This average is what we used as the baseline for every speedup in our comparative table.
+
+For correctness, we compared the result against a double-precision reference and got a max absolute error of 1.829e-02 and a max relative error of 3.352e-05. We think this comes from adding up 8192 single-precision values per row, so it is just float rounding and not a bug. The CUDA variants matched this baseline with a max absolute error of 7.324e-04.
+
 ## Variant 2
 Because Variant 2 uses cudaMallocManaged without prefetching or cudaMemAdvise, the first iteration stalls on 3,550 to 3,988 Host to Device page faults to migrate 67.174 MB of data, resulting in a high maximum execution time. Once cached in GPU VRAM, runs 2 through 30 execute in 1.68 ms (Min), a 14.8x speedup over the first run.
 
