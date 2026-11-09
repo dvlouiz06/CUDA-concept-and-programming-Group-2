@@ -1,5 +1,7 @@
 # Deep Dive: CUDA Programming Project - Matrix-Vector Multiplication
 
+Google Colab Link: https://colab.research.google.com/drive/1fliNFHhCTEUT30Bzmiq0rh1htg3pOcjA?usp=sharing
+
 ## 0.) Group Members, Project Specifications, & AI Usage Declaration
 
 ### Group Members
